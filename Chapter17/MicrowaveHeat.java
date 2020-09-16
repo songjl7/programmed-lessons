@@ -17,6 +17,7 @@ public class MicrowaveHeat{
             seconds = time % 100;
             System.out.println("Heat for "+ minutes + " minutes " + seconds + " seconds");
         } else if (items == 2){
+            totaltime = time + (time / 2);
             minutes = (totaltime - (totaltime % 100)) / 60;
             seconds = totaltime % 100;
             if (seconds == 60){
