@@ -25,8 +25,8 @@ public class SnakeEyes {
                 totalrolls += 1;
                 score = a + b;
                 totalscore += score;
-                a = rand.nextInt() + 1;
-                b = rand.nextInt() + 1;
+                a = rand.nextInt(6) + 1;
+                b = rand.nextInt(6) + 1;
             }
 
             totalrolls += rolls;
