@@ -11,7 +11,6 @@ public class SnakeEyes {
         int a = rand.nextInt(6) + 1;
         int b = rand.nextInt(6) + 1;
         int count = 0;
-        double score = 0;
         double rolls = 0;
         double totalscore = 0;
         double totalrolls = 0;
@@ -20,16 +19,13 @@ public class SnakeEyes {
         while (count < trials ){
             rolls = 0;
 
-            while (a != 1 && b != 1){
+            do {
                 rolls += 1;
                 totalrolls += 1;
-                score = a + b;
-                totalscore += score;
+                totalscore += (a + b);
                 a = rand.nextInt(6) + 1;
                 b = rand.nextInt(6) + 1;
-            }
-
-            totalrolls += rolls;
+            } while (a != 1 && b != 1);
 
             if (rolls > 4) {
                 fourplus += 1;
