@@ -25,7 +25,7 @@ public class SnakeEyes {
                 totalscore += (a + b);
                 a = rand.nextInt(6) + 1;
                 b = rand.nextInt(6) + 1;
-            } while (a != 1 && b != 1);
+            } while (a != 1 || b != 1);
 
             if (rolls > 4) {
                 fourplus += 1;
