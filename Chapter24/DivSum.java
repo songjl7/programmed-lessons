@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class OddSum{
+public class DivSum{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
