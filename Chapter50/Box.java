@@ -8,7 +8,7 @@ public class Box {
         height = h;
         width = w;
     }
-
+    // Chapter 50 exercise 2
     private double faceArea(){
         return length * height;
     }
@@ -25,6 +25,7 @@ public class Box {
         return 2 * faceArea() + 2 * sideArea()+ 2 * topArea();
     }
 
+    // Chapter 50 exercise 1
     public double volume(){
         return length * height * width;
     }
@@ -41,8 +42,18 @@ public class Box {
         return width;
     }
 
+    // Chapter 50 exercise 3
     public Box(Box oldBox){
         this(oldBox.width(), oldBox.height(), oldBox.length());
+    }
+
+    // Chapter 50 exercise 4
+    public static Box biggerBox(Box oldBox){
+        return new Box(1.25*oldBox.width(), 1.25*oldBox.height(), 1.25*oldBox.length());
+    }
+
+    public static Box smallerBox(Box oldBox){
+        return new Box(0.75*oldBox.width(), 0.75*oldBox.height(), 0.75*oldBox.length());
     }
 
 }
