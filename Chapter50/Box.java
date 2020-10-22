@@ -9,8 +9,20 @@ public class Box {
         width = w;
     }
 
+    private double faceArea(){
+        return length * height;
+    }
+
+    private double sideArea(){
+        return height * width;
+    }
+
+    private double topArea(){
+        return length * width;
+    }
+
     public double area(){
-        return 2 * (length * width + length * height + width * height);
+        return 2 * faceArea() + 2 * sideArea()+ 2 * topArea();
     }
 
     public double volume(){
