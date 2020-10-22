@@ -40,4 +40,9 @@ public class Box {
     public double width(){
         return width;
     }
+
+    public Box(Box oldBox){
+        this(oldBox.width(), oldBox.height(), oldBox.length());
+    }
+
 }
