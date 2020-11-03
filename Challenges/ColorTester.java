@@ -30,5 +30,9 @@ public class ColorTester {
         color.lighten(10);
         System.out.println("After lightening color");
         color.summarize();
+
+        extremeColor.darken(10);
+        System.out.println("After darkening extremeColor");
+        extremeColor.summarize();
     }
 }

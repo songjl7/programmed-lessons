@@ -19,11 +19,7 @@ public class Color{
     }
 
     public void summarize(){
-        System.out.println(toString());
-    }
-
-    public String toString(){
-        return "[" + red + ", " + green + ", " + blue + "]";
+        System.out.println("[" + red + ", " + green + ", " + blue + "]");
     }
 
     public void darken(int percent){
@@ -54,34 +50,26 @@ public class Color{
         this.blue = rand.nextInt(256);
     }
 
-    public void setRed(int value){
+    public int roundNum(int value){
         if (value > 255){
-            this.red = 255;
+            return 255;
         } else if (value < 0){
-            this.red = 0;
+            return 0;
         } else {
-            this.red = value;
+            return value;
         }
+    }
+
+    public void setRed(int value){
+        this.red = roundNum(value);
     }
 
     public void setGreen(int value){
-        if (value > 255){
-            this.green = 255;
-        } else if (value < 0){
-            this.green = 0;
-        } else {
-            this.green = value;
-        }
+        this.green = roundNum(value);
     }
 
     public void setBlue(int value){
-        if (value > 255){
-            this.blue = 255;
-        } else if (value < 0){
-            this.blue = 0;
-        } else {
-            this.blue = value;
-        }
+        this.blue = roundNum(value);
     }
 
     public int getRed(){
