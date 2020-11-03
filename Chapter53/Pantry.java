@@ -13,7 +13,7 @@ public class Pantry {
     selected = null;
   }
   
-  // Exercise 2
+  // Exercise 2, add <3 jams
   Pantry(Jam jar1, Jam jar2){
     this.jar1 = jar1;
     this.jar2 = jar2;
@@ -63,5 +63,16 @@ public class Pantry {
   // spread the selected jam
   public void spread(int oz){
     selected.spread(oz);
+  }
+
+  // Exercise 3, add replace() method
+  public void replace(Jam j, int slot){
+    if (slot == 1){
+      jar1 = j;
+    } else if (slot == 2){
+      jar2 = j;
+    } else if (slot == 3){
+      jar3 = j;
+    }
   }
 }
