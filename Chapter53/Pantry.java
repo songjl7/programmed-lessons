@@ -75,4 +75,12 @@ public class Pantry {
       jar3 = j;
     }
   }
+
+  // Exercise 4, add mixedFruit() method
+  public void mixedFruit(){
+    int amtTotal = jar1.amtJam()  + jar2.amtJam() + jar3.amtJam();
+    jar1 = new Jam("Mixed fruit", jar1.getDate(), amtTotal);
+    jar2 = null;
+    jar3 = null;
+  }
 }

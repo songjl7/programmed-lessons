@@ -35,5 +35,14 @@ public class Jam {
          System.out.println("No jam in the Jar!");
       }
     }
+
+    // Exercise 4
+    public int amtJam(){
+      return capacity;
+    }
+
+    public String getDate(){
+      return date;
+    }
   
   }
