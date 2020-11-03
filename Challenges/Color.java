@@ -27,17 +27,25 @@ public class Color{
     }
 
     public void darken(int percent){
-        this.red = (int) Math.round(red * (1 - (double)percent / 100.0));
-        this.green = (int) Math.round(green * (1 - (double)percent / 100.0));
-        this.blue = (int) Math.round(blue * (1 - (double)percent / 100.0));
-        summarize();
+        this.red = darkenColor(red, percent);
+        this.green = darkenColor(green, percent);
+        this.blue = darkenColor(blue, percent);
+    }
+
+    public int darkenColor(int color, int percent){
+        color = (int) Math.round(color * (1 - (double) percent / 100.0));
+        return color;
+    }
+    
+    public int lightenColor(int color, int percent){
+        color = (int) Math.round(color * (1 + (double) percent / 100.0));
+        return color;
     }
 
     public void lighten(int percent){
-        this.red = (int) Math.round(red * (1 + (double)percent / 100.0));
-        this.green = (int) Math.round(green * (1 + (double)percent / 100.0));
-        this.blue = (int) Math.round(blue * (1 + (double)percent / 100.0));
-        summarize();
+        this.red = lightenColor(red, percent);
+        this.green = lightenColor(green, percent);
+        this.blue = lightenColor(blue, percent);
     }
 
     public void random(){
