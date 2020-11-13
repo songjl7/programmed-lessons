@@ -5,7 +5,7 @@ public class LunchAccount {
     Random rand = new Random();
     DecimalFormat df = new DecimalFormat("#,##0.00");
 
-    private int idNum;
+    private static int idNum = 999;
     private double balance;
     private double total = 0.00;
     
@@ -14,13 +14,13 @@ public class LunchAccount {
 
     public LunchAccount(){
         lunchAccountCount ++;
-        this.idNum = rand.nextInt(10000);
+        idNum ++;
         this.balance = 0.0;
     }
 
     public LunchAccount(double balance){
         lunchAccountCount ++;
-        this.idNum = rand.nextInt(10000);
+        idNum ++;
         if (lunchAccountCount <= 100){
             this.balance += 20.00;
         } else {
@@ -29,6 +29,7 @@ public class LunchAccount {
     }
 
     public void addMoney(double amount){
+        lunchAccountCount ++;
         if (lunchAccountCount <= 100 && amount > 0.0){
             this.balance += 20 + amount;
         } else {
