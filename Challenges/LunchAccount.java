@@ -1,8 +1,6 @@
-import java.util.Random;
 import java.text.DecimalFormat;
 
 public class LunchAccount {
-    Random rand = new Random();
     DecimalFormat df = new DecimalFormat("#,##0.00");
 
     private static int idNum = 999;
