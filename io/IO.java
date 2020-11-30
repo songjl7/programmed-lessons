@@ -13,9 +13,9 @@ public class IO {
             file = new File("data.csv");
             scan = new Scanner(file);
 
-            while (scan.hasNextInt()){ // checks if there is more int
-                int num = scan.nextInt();
-                System.out.println("The next number is " + num);
+            while (scan.hasNext()){ // checks if there is more int
+                String letter = scan.next();
+                System.out.println("The next letter is " + letter);
             }
         } catch (FileNotFoundException e) {
             System.out.println("File does not exist");
