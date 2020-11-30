@@ -16,7 +16,7 @@ public class IO {
 
         // try/catch -> we manage the exception ourselves
         try {
-            file = new File("wrong.csv");
+            file = new File("data.csv");
             scan = new Scanner(file);
 
             int num = scan.nextInt();
@@ -24,13 +24,8 @@ public class IO {
         } catch (FileNotFoundException e) {
             System.out.println("File does not exist");
             System.exit(0); // quits the program
+        } finally {
+            System.out.println("Done");
         }
-        // } catch (IOException e){
-        //     System.out.println("File could not be read");
-        //     System.exit(0);
-        // } catch (Exception e) {
-        //     System.out.println("General error. Quitting");
-        //     System.exit(0);
-        // }
     }
 }
