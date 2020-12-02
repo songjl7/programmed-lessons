@@ -13,6 +13,13 @@ public class IO {
             file = new File("data.csv");
             scan = new Scanner(file);
 
+            String[] letters = scan.nextLine().split(", ");
+
+            // for-each loop
+            for (String letter : letters ){
+                System.out.println(letter);
+            }
+
             while (scan.hasNext()){ // checks if there is more int
                 String letter = scan.next();
                 System.out.println("The next letter is " + letter);
