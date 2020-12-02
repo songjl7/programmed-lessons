@@ -13,17 +13,13 @@ public class IO {
             file = new File("data.csv");
             scan = new Scanner(file);
 
-            String[] letters = scan.nextLine().split(", ");
-
-            // for-each loop
-            for (String letter : letters ){
-                System.out.println(letter);
+            // reads data from data.csv to create dog objects
+            while (scan.hasNext()){
+                String[] parameters = scan.nextLine().split(", ");
+                Dog dog = new Dog(parameters[0], parameters[1], Integer.parseInt(parameters[2]));
+                System.out.println(dog);
             }
 
-            while (scan.hasNext()){ // checks if there is more int
-                String letter = scan.next();
-                System.out.println("The next letter is " + letter);
-            }
         } catch (FileNotFoundException e) {
             System.out.println("File does not exist");
             System.exit(0); // quits the program
