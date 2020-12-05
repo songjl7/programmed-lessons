@@ -3,7 +3,6 @@ import java.io.*;
 
 public class GroupAvg{
     public static void main(String[] args){
-        
         File file;
         Scanner scan;
 
