@@ -6,7 +6,6 @@ public class GroupAvg{
         
         File file;
         Scanner scan;
-        PrintWriter output;
 
         Scanner userScan = new Scanner(System.in);
 
@@ -19,7 +18,6 @@ public class GroupAvg{
             try {
                 file = new File(fileName);
                 scan = new Scanner(file);
-                output = new PrintWriter("e1out.txt");
 
                 int sum = 0;
                 int count = 0;
@@ -36,14 +34,13 @@ public class GroupAvg{
 
                 System.out.println("Enter file name (enter \"quit\" to end)");
                 fileName = userScan.nextLine();
-
-                output.close();
             } catch (FileNotFoundException e){
                 System.out.println("File not found");
                 System.exit(0);
             }
         }
 
+        userScan.close();
         System.out.println("Total sum: " + totsum);
     }
 }
