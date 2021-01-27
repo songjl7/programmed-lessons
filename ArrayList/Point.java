@@ -19,7 +19,11 @@ public class Point {
     public double getX(){ return this.x; }
     public double getY() { return this.y; }
 
-    // points
+    // methods
     public String toString(){ return "(" + this.x + ", " + this.y + ")"; }
+
+    public static Point midPoint(Point a, Point b){
+        return new Point((a.getX()+b.getX())/2, (a.getY()+b.getY())/2);
+    }
     
 }

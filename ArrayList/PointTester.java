@@ -11,6 +11,15 @@ public class PointTester {
             points.add(new Point(nums.get(i), nums.get(i+1)));
         }
 
-        
+        System.out.println(points.toString());
+
+        int size = (points.size() - 1) * 2;
+
+        for (int i = 0; i < size; i+= 2){
+            Point middle = Point.midPoint(points.get(i), points.get(i+1));
+            points.add(i+1, middle);
+        }
+
+        System.out.println(points.toString());
     }
 }
