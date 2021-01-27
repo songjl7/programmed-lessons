@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Point {
     private double x;
     private double y;
@@ -26,4 +24,7 @@ public class Point {
         return new Point((a.getX()+b.getX())/2, (a.getY()+b.getY())/2);
     }
     
+    public double proximityOrigin(){
+        return Math.sqrt(x*x + y*y);
+    }
 }
