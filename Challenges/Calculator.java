@@ -85,17 +85,36 @@ public class Calculator extends JFrame implements ActionListener {
         String op = "";
         double result =  0;
 
-        for (char c : arr){
-            if(c >= '0' && c <= '9' || c =='.'){
-                if (op.isEmpty()){
-                    a += c;
-                } else {
-                    b += c;
+        if (arr[0] == '-'){
+            a += arr[0];
+            for (int i = 1; i < arr.length; i++){
+                char c = arr[i];
+                if(c >= '0' && c <= '9' || c =='.'){
+                    if (op.isEmpty()){
+                        a += c;
+                    } else {
+                        b += c;
+                    }
+                }
+    
+                if (c == '+' || c == '-' || c == '*' || c == '/' || c == '√'){
+                    op += c;
                 }
             }
-
-            if (c == '+' || c == '-' || c == '*' || c == '/' || c == '√'){
-                op += c;
+        } else {
+            for (char c : arr){
+                if(c >= '0' && c <= '9' || c =='.'){
+                    if (op.isEmpty()){
+                        a += c;
+                    } else {
+                        b += c;
+                    }
+                }
+    
+                if (c == '+' || c == '-' || c == '*' || c == '/' || c == '√'){
+                    op += c;
+                }
+                
             }
         }
 
